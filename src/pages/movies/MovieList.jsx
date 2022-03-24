@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import MovieItem from "./MovieItem";
+import MovieItem from "../../components/movies/MovieItem";
 import LoadingGif from "../../assets/images/loading.gif";
 import { getPopularMovies } from "../../services/tmdb";
 

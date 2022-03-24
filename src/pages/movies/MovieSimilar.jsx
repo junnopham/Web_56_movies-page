@@ -1,4 +1,4 @@
-import MovieItem from "./MovieItem";
+import MovieItem from "../../components/movies/MovieItem";
 
 const MovieSimilar = ({ similar }) => {
   return (

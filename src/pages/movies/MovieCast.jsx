@@ -1,4 +1,4 @@
-import CastItem from "./CastItem";
+import CastItem from "../../components/movies/CastItem";
 
 const MovieCast = ({ cast }) => {
   return (
