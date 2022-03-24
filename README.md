@@ -2,7 +2,7 @@
 
 ## Live demo
 
-Link: https://junnopham-moviespage.netlify.app/
+Link: <a href="https://junnopham-moviespage.netlify.app/" target="_blank">https://junnopham-moviespage.netlify.app/</a>
 
 ## Homepage
 
