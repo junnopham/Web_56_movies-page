@@ -16,7 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="movie/:movieId" exact element={<Detail />} />
+        <Route path="movie/:movieId" element={<Detail />} />
       </Route>
     </Routes>
   );
