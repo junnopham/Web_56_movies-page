@@ -12,7 +12,7 @@ const MovieItem = ({ movie }) => {
 
   return (
     <div className="mt-2">
-      <Link to={`movie/${id}`}>
+      <Link to={`/movie/${id}`}>
         <img
           src={
             poster_path
@@ -25,7 +25,7 @@ const MovieItem = ({ movie }) => {
       </Link>
       <div className="mt-2">
         <Link
-          to={`movie/${id}`}
+          to={`/movie/${id}`}
           className="text-lg font-semibold mt-2 hover:text-gray-300"
         >
           {title}
