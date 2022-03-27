@@ -28,7 +28,7 @@ const MovieSimilar = ({ similar }) => {
               <SwiperSlide key={"similar_" + id}>
                 <img
                   src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
-                  className="transition-all hover:scale-110 hover:z-0"
+                  className="transition-all hover:scale-105"
                   alt={title}
                 />
               </SwiperSlide>
