@@ -26,11 +26,13 @@ const MovieSimilar = ({ similar }) => {
           {similar.map(({ id, title, backdrop_path }) => {
             return (
               <SwiperSlide key={"similar_" + id}>
-                <img
-                  src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
-                  className="transition-all hover:scale-105"
-                  alt={title}
-                />
+                <Link to={`/movie/${id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
+                    className="transition-all hover:scale-105"
+                    alt={title}
+                  />
+                </Link>
               </SwiperSlide>
             );
           })}
