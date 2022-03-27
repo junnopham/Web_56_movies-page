@@ -23,7 +23,7 @@ const MovieInfo = ({ detail, crew }) => {
   return (
     <div className="movie-info border-b border-gray-800">
       <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row">
-        <div className="flex-none">
+        <div className="flex-none mx-auto">
           <img
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             className="w-64 lg:w-96"

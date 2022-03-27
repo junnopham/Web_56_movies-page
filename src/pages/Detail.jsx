@@ -23,7 +23,7 @@ const Detail = () => {
         detail,
         crew,
         cast,
-        similar: similar.slice(0, 5),
+        similar: similar.slice(0, 10),
       });
       setLoading(false);
     });

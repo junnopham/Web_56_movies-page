@@ -2,22 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.movie-similar .swiper-wrapper {
+  padding: 20px 0;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
+.movie-similar .swiper-slide {
+  transition: 250ms all;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
+.movie-similar .swiper-wrapper {
+  padding: 20px 0;
+}
+
+.movie-similar .swiper-slide:hover {
+   z-index: 1;
 }
 
 .lds-dual-ring {

@@ -68,7 +68,7 @@ const Home = () => {
           <ul className="flex flex-wrap justify-center -mb-px">
             <li
               className={clsx(
-                "inline-block p-2 text-lg uppercase tracking-wide font-semibold rounded-t-lg border-b-2 hover:text-orange-500 hover:border-orange-500 mr-2 cursor-pointer",
+                "inline-block p-2 text-sm md:text-lg uppercase tracking-wide font-semibold rounded-t-lg border-b-2 hover:text-orange-500 hover:border-orange-500 mr-2 cursor-pointer",
                 {
                   "text-orange-500": type === "popular",
                   "border-orange-500": type === "popular",
@@ -81,7 +81,7 @@ const Home = () => {
             </li>
             <li
               className={clsx(
-                "inline-block p-2 text-lg uppercase tracking-wide font-semibold rounded-t-lg border-b-2 hover:text-orange-500 hover:border-orange-500 mr-2 cursor-pointer",
+                "inline-block p-2 text-sm md:text-lg uppercase tracking-wide font-semibold rounded-t-lg border-b-2 hover:text-orange-500 hover:border-orange-500 mr-2 cursor-pointer",
                 {
                   "text-orange-500": type === "upcoming",
                   "border-orange-500": type === "upcoming",
@@ -94,7 +94,7 @@ const Home = () => {
             </li>
             <li
               className={clsx(
-                "inline-block p-2 text-lg uppercase tracking-wide font-semibold rounded-t-lg border-b-2 hover:text-orange-500 hover:border-orange-500 mr-2 cursor-pointer",
+                "inline-block p-2 text-sm md:text-lg uppercase tracking-wide font-semibold rounded-t-lg border-b-2 hover:text-orange-500 hover:border-orange-500 mr-2 cursor-pointer",
                 {
                   "text-orange-500": type === "top_rated",
                   "border-orange-500": type === "top_rated",

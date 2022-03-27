@@ -1,20 +1,40 @@
-import MovieItem from "../../components/movies/MovieItem";
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const MovieSimilar = ({ similar }) => {
   return (
     <div className="movie-similar border-b border-gray-800">
       <div className="container mx-auto px-4 py-10">
         <h2 className="text-4xl font-semibold">Similar Movie</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 pt-5">
-          {similar.map((similarMovie) => {
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={10}
+          slidesPerView={3}
+          breakpoints={{
+            768: {
+              slidesPerView: 5,
+            },
+          }}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          className="relative mt-8"
+        >
+          {similar.map(({ id, title, backdrop_path }) => {
             return (
-              <MovieItem
-                movie={similarMovie}
-                key={`similar_${similarMovie.id}`}
-              />
+              <SwiperSlide key={"similar_" + id}>
+                <img
+                  src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
+                  className="transition-all hover:scale-110 hover:z-0"
+                  alt={title}
+                />
+              </SwiperSlide>
             );
           })}
-        </div>
+        </Swiper>
       </div>
     </div>
   );

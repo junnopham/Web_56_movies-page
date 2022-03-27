@@ -1,8 +1,6 @@
+import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FaStar } from "react-icons/fa";
-
-import { getGenres } from "../../utils/tmdb";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,39 +17,24 @@ const MovieSlider = ({ movies }) => {
       scrollbar={{ draggable: true }}
       className="relative"
     >
-      {movies.map(
-        ({
-          id,
-          title,
-          overview,
-          genre_ids,
-          backdrop_path,
-          vote_average,
-          release_date,
-        }) => {
-          return (
-            <SwiperSlide key={"slider_" + id}>
+      {movies.map(({ id, title, overview, backdrop_path }) => {
+        return (
+          <SwiperSlide key={"slider_" + id}>
+            <Link to={`/movie/${id}`}>
               <img
                 src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
-                alt=""
+                alt={title}
               />
-              <div className="container mx-auto h-full flex items-end">
-                <div className="w-2/3 absolute left-5 bottom-5">
-                  <h3 className="font-bold text-white text-5xl">{title}</h3>
-                  <div className="flex items-center text-white text-sm mt-2">
-                    <span className="italic">{release_date}</span>
-                    <span className="mx-1"> </span>
-                    <span className="mx-1">{vote_average}</span>
-                    <FaStar className="text-orange-500 mr-2" />
-                    {getGenres(genre_ids)}
-                  </div>
-                  <p className="text-white text-base mt-2 mb-4">{overview}</p>
-                </div>
+              <div className="w-full absolute left-0 bottom-0 bg-gradient-to-b from-transparent to-black px-4 pt-20 pb-6">
+                <h3 className="font-bold text-white text-3xl">{title}</h3>
+                <p className="text-white opacity-80 text-sm line-clamp-2 overflow-hidden mt-2 mb-4">
+                  {overview}
+                </p>
               </div>
-            </SwiperSlide>
-          );
-        }
-      )}
+            </Link>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
