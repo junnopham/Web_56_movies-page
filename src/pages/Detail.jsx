@@ -13,27 +13,25 @@ const Detail = () => {
   const { movieId } = useParams();
   const location = useLocation();
 
-  const [detail, setDetail] = useState({});
-  const [crew, setCrew] = useState([]);
-  const [cast, setCast] = useState([]);
-  const [similar, setSimilar] = useState([]);
+  const [info, setInfo] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-  }, [location]);
-
-  useEffect(() => {
     getDetailMovie(movieId).then(({ detail, crew, cast, similar }) => {
-      setDetail(detail);
-      setCrew(crew);
-      setCast(cast);
-      setSimilar(similar.slice(0, 5));
+      setInfo({
+        detail,
+        crew,
+        cast,
+        similar: similar.slice(0, 5),
+      });
       setLoading(false);
     });
   }, [location]);
 
   if (loading) return <Loading />;
+
+  const { detail, crew, similar, cast } = info;
 
   return (
     <>
